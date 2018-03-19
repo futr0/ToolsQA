@@ -1,0 +1,11 @@
+C:\Users\artur\source\repos\ToolsQA\ToolsQA\bin\Debug\ToolsQA.exe.config
+C:\Users\artur\source\repos\ToolsQA\ToolsQA\bin\Debug\ToolsQA.exe
+C:\Users\artur\source\repos\ToolsQA\ToolsQA\bin\Debug\ToolsQA.pdb
+C:\Users\artur\source\repos\ToolsQA\ToolsQA\bin\Debug\WebDriver.dll
+C:\Users\artur\source\repos\ToolsQA\ToolsQA\bin\Debug\WebDriver.xml
+C:\Users\artur\source\repos\ToolsQA\ToolsQA\obj\Debug\ToolsQA.csprojResolveAssemblyReference.cache
+C:\Users\artur\source\repos\ToolsQA\ToolsQA\obj\Debug\ToolsQA.csproj.CoreCompileInputs.cache
+C:\Users\artur\source\repos\ToolsQA\ToolsQA\obj\Debug\ToolsQA.exe
+C:\Users\artur\source\repos\ToolsQA\ToolsQA\obj\Debug\ToolsQA.pdb
+C:\Users\artur\source\repos\ToolsQA\ToolsQA\bin\Debug\nunit.framework.dll
+C:\Users\artur\source\repos\ToolsQA\ToolsQA\bin\Debug\nunit.framework.xml
