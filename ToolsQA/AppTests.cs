@@ -31,8 +31,8 @@ public class AppTests
     }
 
     [Test]
-    [TestCase("Adrian", "Pralczak", 1991, 0, 1, "Manual Tester", "Selenium Webdriver", 2, 2)]
-    [TestCase("Grzegorz", "Woltronkrawczyk", 1991, 0, 1, "Manual Tester", "QTP", 1, 3)]
+    [TestCase("Adrian", "Palczak", 1991, 0, 1, "Manual Tester", "Selenium Webdriver", 2, 2)]
+    [TestCase("Grzegorz", "Krawczyk", 1991, 0, 1, "Manual Tester", "QTP", 1, 3)]
     public void AutomationFormTest(string name, string surname, int year,
                                    int gender, int exp_years, string profession,
                                    string tool, int continent, int command)
