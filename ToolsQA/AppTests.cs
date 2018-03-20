@@ -21,6 +21,7 @@ public class AppTests
     [Test]
     [TestCase("by_link", "Link Test", "http://toolsqa.com/automation-practice-table/")]
     [TestCase("by_partial_link", "Partial Link", "http://toolsqa.com/automation-practice-form/")]
+    [TestCase("by_link", "Partial Link", "http://fakesite.com/")]
     public void RedirectLinkTest(string link_type, string link_text, string expected_page)
     {
         AppInstance.OpenApp();
@@ -33,6 +34,7 @@ public class AppTests
     [Test]
     [TestCase("Adrian", "Palczak", 1991, 0, 1, "Manual Tester", "Selenium Webdriver", 2, 2)]
     [TestCase("Grzegorz", "Krawczyk", 1991, 0, 1, "Manual Tester", "QTP", 1, 3)]
+    [TestCase("Invalid", "Data", 2000, 0, 0, "Automation Tester", "Fake", 1, 0)]
     public void AutomationFormTest(string name, string surname, int year,
                                    int gender, int exp_years, string profession,
                                    string tool, int continent, int command)
