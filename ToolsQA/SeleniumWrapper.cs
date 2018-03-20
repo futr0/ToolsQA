@@ -5,7 +5,7 @@ using OpenQA.Selenium.Firefox;
 public class SeleniumWrapper
 {
     /// <summary>
-    /// This class is a simple wrapper for some actions that can be done using Selenium webdriver
+    /// Simple wrapper for some actions that can be done using Selenium webdriver
     /// </summary>
 
     public string Address = "http://toolsqa.wpengine.com/automation-practice-form/";
@@ -59,6 +59,22 @@ public class SeleniumWrapper
         By Locator = By.XPath(XPathQuery);
         IWebElement FormField = driver.FindElement(Locator);
         FormField.Click();
+    }
+
+    public void FindElementByLink(string link_type, string link_text)
+    {
+        //Finding and clicking at element by LinkText or PartialLinkText
+
+        if (link_type == "by_link")
+        {
+            By Locator = By.LinkText(link_text);
+            FindClickType(Locator);
+        }
+        else
+        {
+            By Locator = By.PartialLinkText(link_text);
+            FindClickType(Locator);
+        }
     }
 
     public void FillForm(string firstname, string lastname, int date,
@@ -142,7 +158,7 @@ public class SeleniumWrapper
 
         bool IsEmpty = false;
 
-        int falseCounter = 0;
+        int EmptyFieldsCounter = 0;
 
         //Firstname field checking
         By Locator = By.Name("firstname");
@@ -151,7 +167,7 @@ public class SeleniumWrapper
         string value = FormField.GetAttribute("value");
         if(value == "")
         {
-            falseCounter++;
+            EmptyFieldsCounter++;
         }
 
         //Gender field checking
@@ -165,16 +181,37 @@ public class SeleniumWrapper
             bool value2 = FormField2.Selected;
             if (value2 == false)
             {
-                falseCounter++;
+                EmptyFieldsCounter++;
             }
         }
 
-        if (falseCounter == 3)
+        if (EmptyFieldsCounter == 3)
         {
             IsEmpty = true;
         }
 
         return IsEmpty;
+
+    }
+
+    public bool CheckActualPage(string expected_page)
+    {
+
+        /// <summary>
+        /// This method will check if we are on the same page as expected_page
+        /// <param name=expected_page">Full url adress of expected page</param>"
+        /// </summary>
+
+        bool IsExpectedPage = false;
+
+        string actual_page = driver.Url;
+
+        if (actual_page == expected_page)
+        {
+            IsExpectedPage = true;
+        }
+
+        return IsExpectedPage;
 
     }
 
